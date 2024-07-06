@@ -41,13 +41,13 @@ class ModelBuilder:
             model.fit(X_train, y_train, verbose=True, eval_set=[(X_train, y_train)])
             model.save_model(f"model/{transformer_name}_xgboost_model.json")
 
-        # elif model_name == "catboost":
-        #     model = CatBoostClassifier(
-        #         task_type="GPU", devices='0:1', iterations=10000, 
-        #         learning_rate=1, depth=2
-        #     )
-        #     model.fit(X_train, y_train, verbose=True, eval_set=(X_train, y_train), early_stopping_rounds=100)
-        #     model.save_model(f"model/{transformer_name}_catboost_model.cbm", format="cbm")
+        elif model_name == "catboost":
+            model = CatBoostClassifier(
+                task_type="GPU", devices='0:1', iterations=10000, 
+                learning_rate=1, depth=2
+            )
+            model.fit(X_train, y_train, verbose=True, eval_set=(X_train, y_train), early_stopping_rounds=100)
+            model.save_model(f"model/{transformer_name}_catboost_model.cbm", format="cbm")
 
         elif model_name == "ann":
             model = MLPClassifier(
@@ -67,9 +67,9 @@ class ModelBuilder:
             model = XGBClassifier()
             model.load_model(f"model/{transformer_name}_xgboost_model.json")
 
-        # elif model_name == "catboost":
-        #     model = CatBoostClassifier()
-        #     model.load_model(f"model/{transformer_name}_catboost_model.cbm", format="cbm")
+        elif model_name == "catboost":
+            model = CatBoostClassifier()
+            model.load_model(f"model/{transformer_name}_catboost_model.cbm", format="cbm")
 
         elif model_name == "ann":
             with open(f"model/{transformer_name}_ann_model.pkl", "rb") as f:
