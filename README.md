@@ -1,7 +1,8 @@
 ## Phishing Webpage Detection via Machine Learning and Natural Language Processing Features
 
 
-### System Workflow
+<h3 align="center">System Workflow</h3>
+
 ![System Workflow](images/workflow.png)
 
 
