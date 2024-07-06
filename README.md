@@ -1,5 +1,8 @@
 ## Phishing Webpage Detection via Machine Learning and Natural Language Processing Features
 
+![System Workflow](images/workflow.png)
+
+
 ### Model Performance Table
 
 | Transformer Name | Model Name | Accuracy   | Precision  | Recall     | F1 Score   |
