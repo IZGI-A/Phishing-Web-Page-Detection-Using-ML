@@ -16,3 +16,6 @@
 | SBERT            | XGBoost    | 0.979693   | 0.982963   | 0.980898   | 0.981929   |
 | SBERT            | CatBoost   | 0.967981   | 0.965234   | 0.977559   | 0.971357   |
 | SBERT            | ANN        | 0.980337   | 0.977473   | 0.988046   | 0.982731   |
+
+
+Note: This project will be extended through the repo [here](https://github.com/infochaincrafters/Phishing-Web-Page-Detection-Using-ML).
